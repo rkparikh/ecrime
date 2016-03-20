@@ -1,4 +1,5 @@
 <?php
+	error_reporting(E_ALL ^ E_DEPRECATED);
 	function dbc()
 	{
 		$con=mysql_connect("localhost","root","");
