@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_DEPRECATED);
 include "class.change_pass1.php";
 
  class pass1methods
