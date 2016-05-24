@@ -162,8 +162,8 @@ session_start();
 	
 			$criminalmethods_obj=new criminalmethods();
 			$criminal_obj=$criminalmethods_obj->search_by_criteria("select * from criminal_record");
-			//$max=sizeof($criminal_obj);
-			for($i=0; $i<10; $i++)
+			$max=sizeof($criminal_obj);
+			for($i=0; $i<$max; $i++)
 			{
 			$criminal_id=$criminal_obj[$i]->criminal_id;
 			$criminal_f_name=$criminal_obj[$i]->criminal_f_name;

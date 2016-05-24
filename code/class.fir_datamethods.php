@@ -6,7 +6,7 @@ class fir_datamethods
 	private $con;
 	function __construct()
 	{
-		echo "higgghhhh";
+		//echo "higgghhhh";
 		$this->con=mysql_connect("localhost","root","");
 		if(!$this->con)
 		{
@@ -36,7 +36,7 @@ class fir_datamethods
 	}
 	function search_fir_data($case_id,$crime_name,$citizen_id)
 	{
-		echo "hiiiiii";
+		//echo "hiiiiii";
 		$fir_data_obj=new fir_data();
 		$rec1=mysql_query("select * from fir_data where case_id=$case_id and crime_name='$crime_name'",$this->con);
 		if($rec2=mysql_fetch_array($rec1))
@@ -59,7 +59,7 @@ class fir_datamethods
 	}
 	function insert_fir_data($fir_data_obj)
 	{
-		echo "hellooooooooooooo";
+		//echo "hellooooooooooooo";
 		
 		$stt=mysql_query("insert into fir_data(case_id,crime_id,crime_name,location,citizen_id,fdate,ans1,ans2,ans3,ans4,ans5)
 					values ($fir_data_obj->case_id,$fir_data_obj->crime_id,'".$fir_data_obj->crime_name."','".$fir_data_obj->location."',$fir_data_obj->citizen_id,'".$fir_data_obj->fdate."','".$fir_data_obj->ans1."','".$fir_data_obj->ans2."','".$fir_data_obj->ans3."','".$fir_data_obj->ans4."','".$fir_data_obj->ans5."')");	
@@ -72,7 +72,7 @@ class fir_datamethods
 	}
 	function search_by_criteria($criteria)
 	{
-		echo "search by criteria";
+		//echo "search by criteria";
 		$i=0;
 		$rec1=mysql_query("select * from fir_data");
 		while($rec2=mysql_fetch_array($rec1))

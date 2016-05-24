@@ -572,7 +572,7 @@ class controller
 		
 		if($this->submit=="log_robbery_submit")
 		{
-			echo "robbery";
+			//echo "robbery";
 			$fir_datamethods_obj=new fir_datamethods();
 		
 			//$crime_id=$_GET["crime_id"];
@@ -603,7 +603,7 @@ class controller
 				
 				$fir_data_obj=$fir_datamethods_obj->search_fir_data($pop_fir_data_obj->case_id,$pop_fir_data_obj->crime_name,$pop_fir_data_obj->citizen_id);
 				$_SESSION["fir_data_obj"]=$fir_data_obj;
-				echo "<font color=red>".$_SESSION["fir_data_obj"]->crime_name."</font></br>";
+				echo "<font color=red> Record Saved for ".$_SESSION["fir_data_obj"]->crime_name."</font></br>";
 				
 			}
 		}
@@ -725,5 +725,5 @@ class controller
 	
 }
 $controller_obj=new controller();
-echo "In controller";
+//echo "In controller";
 ?>

@@ -69,7 +69,7 @@
 		</tr>
 		<tr>
 			<td>Complaint date</td>
-			<td><input type='text' name='fdate' id='fdate' size ='10' value=<?php echo date('y-m-d');  ?>>(yyyy-mm-dd)</td>
+			<td><input type='text' name='fdate' id='fdate' size ='10' value=<?php echo date('Y-m-d');  ?>>(yyyy-mm-dd)</td>
 		</tr>	
 		<tr>
 			<td>Where did the it occurs?</td>
